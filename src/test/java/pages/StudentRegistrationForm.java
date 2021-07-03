@@ -9,8 +9,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class StudentRegistrationForm {
 
-    public void openPage() {
-        open("https://demoqa.com/automation-practice-form");
+    public void openPage(String url) {
+        open(url);
     }
 
     public void fillFirstName(String firstName) {

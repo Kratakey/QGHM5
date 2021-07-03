@@ -13,7 +13,8 @@ public class PracticeFormTest extends config.TestBase {
 
     Faker fake = new Faker(new Locale("en-US"));
 
-    String  firstName = fake.name().firstName(),
+    String  url = "https://demoqa.com/automation-practice-form",
+            firstName = fake.name().firstName(),
             lastName = fake.name().lastName(),
             email = fake.internet().emailAddress(),
             gender = fake.demographic().sex(),
@@ -31,7 +32,7 @@ public class PracticeFormTest extends config.TestBase {
     @Test
     void successfulSubmitFormTest() {
 
-        studentRegistrationForm.openPage();
+        studentRegistrationForm.openPage(url);
 
         studentRegistrationForm.fillFirstName(firstName);
         studentRegistrationForm.fillLastName(lastName);
