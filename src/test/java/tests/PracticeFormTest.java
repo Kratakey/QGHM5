@@ -1,12 +1,15 @@
+package tests;
+
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
+import pages.StudentRegistrationForm;
 
 import java.util.Locale;
 
 
-public class PracticeFormTest extends TestBase {
+public class PracticeFormTest extends config.TestBase {
 
-    PageObject pageObject = new PageObject();
+    StudentRegistrationForm studentRegistrationForm = new StudentRegistrationForm();
 
     Faker fake = new Faker(new Locale("en-US"));
 
@@ -28,24 +31,24 @@ public class PracticeFormTest extends TestBase {
     @Test
     void successfulSubmitFormTest() {
 
-        pageObject.openPage();
+        studentRegistrationForm.openPage();
 
-        pageObject.fillFirstName(firstName);
-        pageObject.fillLastName(lastName);
-        pageObject.fillEmail(email);
-        pageObject.selectGender(gender);
-        pageObject.fillMobileNumber(mobileNumber);
-        pageObject.fillDateOfBirth(year, month, day);
-        pageObject.selectSubject(subject);
-        pageObject.selectHobbies(hobbies);
-        pageObject.uploadPicture(picture);
-        pageObject.fillAddress(address);
-        pageObject.selectState(state);
-        pageObject.selectCity(city);
+        studentRegistrationForm.fillFirstName(firstName);
+        studentRegistrationForm.fillLastName(lastName);
+        studentRegistrationForm.fillEmail(email);
+        studentRegistrationForm.selectGender(gender);
+        studentRegistrationForm.fillMobileNumber(mobileNumber);
+        studentRegistrationForm.fillDateOfBirth(year, month, day);
+        studentRegistrationForm.selectSubject(subject);
+        studentRegistrationForm.selectHobbies(hobbies);
+        studentRegistrationForm.uploadPicture(picture);
+        studentRegistrationForm.fillAddress(address);
+        studentRegistrationForm.selectState(state);
+        studentRegistrationForm.selectCity(city);
 
-        pageObject.clickSubmit();
+        studentRegistrationForm.clickSubmit();
 
-        pageObject.testRegistrationForm(
+        studentRegistrationForm.testRegistrationForm(
                 firstName,
                 lastName,
                 email,

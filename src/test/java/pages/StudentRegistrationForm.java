@@ -1,3 +1,5 @@
+package pages;
+
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
@@ -5,7 +7,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class PageObject {
+public class StudentRegistrationForm {
 
     public void openPage() {
         open("https://demoqa.com/automation-practice-form");
