@@ -51,7 +51,7 @@ public class StudentRegistrationForm {
     }
 
     public void uploadPicture(String picture) {
-        $("input#uploadPicture").uploadFile(new File("src/test/resources/"+ picture));
+        $("input#uploadPicture").uploadFile(new File("src/test/resources/" + picture));
     }
 
     public void fillAddress(String address) {
@@ -87,11 +87,11 @@ public class StudentRegistrationForm {
             String address,
             String state,
             String city) {
-        $("tbody").shouldHave(text(firstName+" "+ lastName),
+        $("tbody").shouldHave(text(firstName + " " + lastName),
                 text(email),
                 text(gender),
                 text(mobileNumber),
-                text(day+" "+ month+","+ year),
+                text(day + " " + month + "," + year),
                 text(subject),
                 text(hobbies),
                 text(picture),

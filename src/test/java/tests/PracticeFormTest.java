@@ -63,9 +63,6 @@ public class PracticeFormTest extends config.TestBase {
                 address,
                 state,
                 city);
-
-
-
     }
 
 }
